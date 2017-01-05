@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            '/root/github/mysite',
+            os.path.dirname(os.path.abspath(__file__)),
             ],
         'APP_DIRS': True,
         'OPTIONS': {
