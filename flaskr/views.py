@@ -9,7 +9,6 @@ from flaskr.models import Entries
 
 def show_entries(request):
     entries = Entries.objects.all()
-    print entries
     return render(request, 'flaskr/templates/show_entries.html', {'entries': entries})
 
 def add_entry(request):
@@ -29,9 +28,7 @@ def login(request):
             error = 'invalid password'
         else:
             request.session['logged_in'] = True
-            print '3'
             return HttpResponseRedirect('/v1')
-    print 'out'
     return render(request, 'flaskr/templates/login.html', dict(error=error))
 
 def logout(request):
