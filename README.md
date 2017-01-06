@@ -1,1 +1,1 @@
-Flaskr Practice in Django
+Djangory
