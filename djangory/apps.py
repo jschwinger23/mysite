@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 
 class FlaskrConfig(AppConfig):
-    name = 'flaskr'
+    name = 'djangory'

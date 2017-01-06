@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
   {% if request.session.logged_in %}
-    <form action="{% url 'flaskr:add_entry' %}" method=post class=add-entry>
+    <form action="{% url 'djangory:add_entry' %}" method=post class=add-entry>
       <dl>
         <dt>title:
         <dd><input type=text size=30 name=title>

@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 
-import flaskr.urls
+import djangory.urls
 
 urlpatterns = [
-    url('^v1/', include(flaskr.urls, namespace='flaskr')),
+    url('^v1/', include(djangory.urls, namespace='djangory')),
 ]

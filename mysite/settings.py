@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'flaskr.apps.FlaskrConfig',
+    'djangory.apps.FlaskrConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,7 +82,7 @@ DATABASES = {
         'PASSWORD': '1234qwer',
         'HOST': '139.196.226.40',
         'PORT': 3306,
-        'NAME': 'flaskr',
+        'NAME': 'djangory',
     }
 }
 

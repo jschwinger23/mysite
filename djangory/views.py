@@ -2,14 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
 
-from flaskr.models import Entries
+from djangory.models import Entries
 
 
 # Create your views here.
 
 def show_entries(request):
     entries = Entries.objects.all()
-    return render(request, 'flaskr/templates/show_entries.html', {'entries': entries})
+    return render(request, 'djangory/templates/show_entries.html', {'entries': entries})
 
 def add_entry(request):
     if not request.session.get('logged_in'):
@@ -29,7 +29,7 @@ def login(request):
         else:
             request.session['logged_in'] = True
             return HttpResponseRedirect('/v1')
-    return render(request, 'flaskr/templates/login.html', dict(error=error))
+    return render(request, 'djangory/templates/login.html', dict(error=error))
 
 def logout(request):
     request.session['logged_in'] = False
